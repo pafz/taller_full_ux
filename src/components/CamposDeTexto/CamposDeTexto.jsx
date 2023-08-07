@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import './CamposDeTexto.css';
+import { Box } from '../Box/Box';
 export const CamposDeTexto = ({ state, className, line = 'line-1.svg' }) => {
   return (
     <div className={`campos-de-texto ${className}`}>
@@ -14,6 +15,8 @@ export const CamposDeTexto = ({ state, className, line = 'line-1.svg' }) => {
           )}
         </div>
         <div className="div">Correo electrónico</div>
+        //TODO:
+        <Box />
       </div>
     </div>
   );
@@ -21,4 +24,5 @@ export const CamposDeTexto = ({ state, className, line = 'line-1.svg' }) => {
 CamposDeTexto.propTypes = {
   state: PropTypes.oneOf(['active-web', 'error', 'focus-web', 'default']),
   line: PropTypes.string,
+  text: PropTypes.string,
 };
